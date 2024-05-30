@@ -16,8 +16,8 @@ def get_form_submissions(api_key, submission_id):
         return None
 
 def get_submission_data(submission_ID):
-    # Replace '48cec1b525331730de6371554c2613a4' with your actual JotForm API key
-    api_key = "980ea3de9e275ece5334aab9a87a1246"
+    # Replace with your actual JotForm API key
+    api_key = ""
 
    
    
