@@ -14,7 +14,7 @@ from config import USERNAME, PASSWORD
 
 # Define Chrome options
 option = Options()
-option.binary_location = "C:/Users/sebas/OneDrive/Documents/Python Files/chrome-win64/chrome.exe"  # Set the path to your Chrome binary
+option.binary_location = ""  # Set the path to your Chrome binary
 option.add_experimental_option("detach", True)
 option.add_argument("start-maximized")
 
@@ -23,7 +23,7 @@ option.add_argument("start-maximized")
 # Create the WebDriver instance with the specified options
 driver = webdriver.Chrome(options=option)
 
-attachment_path = "C:/Users/sebas/Downloads/forms"    
+attachment_path = ""    
 
 # Define the Eastern Time timezone
 eastern_timezone = pytz.timezone('US/Eastern')
@@ -31,11 +31,11 @@ eastern_timezone = pytz.timezone('US/Eastern')
 # Get the attachments and data_list from the main.py function
 
 def uploadFile(data_list):
-    driver.get("https://choose2rent.ielightning.net/")  
+    driver.get("url_to_ie")  #replace with proper url
     username_input = driver.find_element(By.ID, "username")
-    username_input.send_keys(USERNAME)
+    username_input.send_keys(user)
     password_input = driver.find_element(By.ID, "password")
-    password_input.send_keys(PASSWORD)
+    password_input.send_keys(pw)
     login_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, '.login_button')))
     login_button.click()
             
